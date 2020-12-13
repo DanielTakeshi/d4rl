@@ -28,6 +28,7 @@ The Flow and CARLA tasks also require additional installation steps:
 *Daniel's comments*:
 
 - Do `conda create -n d4rl python=3.6` to get a conda env started. Then do the above. The `dm_control` package will throw an error during the `pip install -e .` portion due to missing the `absl` package, but strangely, simply re-doing `pip install -e .` will be fine. I'm guessing that package got installed later during the pipeline.
+- Some of their scripts may use outdated environments. The only suported ones are on the Wiki ([source](https://github.com/rail-berkeley/d4rl/issues/8)).
 - The CARLA installation will use up 3-4G of space. TODO try it...
 - Flow: TODO try it ...
 
