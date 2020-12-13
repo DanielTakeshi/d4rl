@@ -25,6 +25,12 @@ The Flow and CARLA tasks also require additional installation steps:
 - Instructions for installing CARLA can be found [here](https://github.com/rail-berkeley/d4rl/wiki/CARLA-Setup)
 - Instructions for installing Flow can be found [here](https://flow.readthedocs.io/en/latest/flow_setup.html). Make sure to install using the SUMO simulator, and add the flow repository to your PYTHONPATH once finished.
 
+*Daniel's comments*:
+
+- Do `conda create -n d4rl python=3.6` to get a conda env started. Then do the above. The `dm_control` package will throw an error during the `pip install -e .` portion due to missing the `absl` package, but strangely, simply re-doing `pip install -e .` will be fine. I'm guessing that package got installed later during the pipeline.
+- The CARLA installation will use up 3-4G of space. TODO try it...
+- Flow: TODO try it ...
+
 ## Using d4rl
 
 d4rl uses the [OpenAI Gym](https://github.com/openai/gym) API. Tasks are created via the `gym.make` function. A full list of all tasks is [available here](https://github.com/rail-berkeley/d4rl/wiki/Tasks).
