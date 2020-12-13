@@ -4,8 +4,10 @@ import gym
 
 
 if __name__ == "__main__":
+    # For acceptable versions, see:
+    # https://github.com/rail-berkeley/d4rl/wiki/Tasks
     parser = argparse.ArgumentParser()
-    parser.add_argument('--env_name', type=str, default='maze2d-umaze-v0')
+    parser.add_argument('--env_name', type=str, default='maze2d-umaze-v1')
     args = parser.parse_args()
 
     env = gym.make(args.env_name)
